@@ -145,9 +145,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .card {
@@ -155,8 +155,9 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   padding: 20px 30px;
   color: white;
   border-radius: 15px;
@@ -168,6 +169,7 @@ button {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  text-align: center;
 }
 
 #modal-background {
@@ -189,7 +191,7 @@ button {
     padding: 0 20px;
     width: 100%;
   }
-  .card {
-    flex-direction: column;
+  #histories {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
